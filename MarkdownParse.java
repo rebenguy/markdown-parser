@@ -16,13 +16,13 @@ public class MarkdownParse {
         while(currentIndex < markdown.length()) {
         
             int openBracket = markdown.indexOf("[", currentIndex);
+
             int closeBracket = markdown.indexOf("]", openBracket);
 
             char paren = '(';
             char colo = ':';
             char next = markdown.charAt(closeBracket + 1);
-
-
+            
             if (next == paren) {
                 int openParen = markdown.indexOf("(", closeBracket);
                 int closeParen = markdown.indexOf(")", openParen);
