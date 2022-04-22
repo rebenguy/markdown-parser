@@ -58,4 +58,49 @@ public class MarkdownParseTest {
         assertEquals("[]", links);
     }
 
+    @Test public void getLinksFile6() throws IOException {
+
+        Path fileName = Path.of("test-file6.md");
+        String content = Files.readString(fileName);
+        String links = MarkdownParse.getLinks(content).toString();
+        
+        assertEquals("[]", links);
+    }
+
+    @Test public void getLinksFile7() throws IOException {
+
+        Path fileName = Path.of("test-file7.md");
+        String content = Files.readString(fileName);
+        String links = MarkdownParse.getLinks(content).toString();
+        
+        assertEquals("[page.com]", links);
+    }
+
+    @Test public void getLinksFile8() throws IOException {
+
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        String links = MarkdownParse.getLinks(content).toString();
+        
+        assertEquals("[page.com]", links);
+    }
+
+    @Test public void getLinksFile9() throws IOException {
+
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        String links = MarkdownParse.getLinks(content).toString();
+        
+        assertEquals("[]", links);
+    }
+    
+    @Test public void getLinksFile10() throws IOException {
+
+        Path fileName = Path.of("test-file10.md");
+        String content = Files.readString(fileName);
+        String links = MarkdownParse.getLinks(content).toString();
+        
+        assertEquals("[a link on the first line]", links);
+    }
+
 }
