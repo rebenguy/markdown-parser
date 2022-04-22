@@ -32,15 +32,17 @@ public class MarkdownParse {
             else if (next == colo) {
                 int colon = markdown.indexOf(":", closeBracket);
                 int dot = markdown.indexOf(".", colon);
-                toReturn.add(markdown.substring(colon + 1, dot));
+                toReturn.add(markdown.substring(colon + 1, dot + 4));
                 currentIndex = dot + 4;
+            }
+            else {
+                break;
             }
 
         }
 
         return toReturn;
     }
-
 
     public static void main(String[] args) throws IOException {
 
