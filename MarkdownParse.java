@@ -19,6 +19,10 @@ public class MarkdownParse {
 
             int closeBracket = markdown.indexOf("]", openBracket);
 
+            if(openBracket == -1 || closeBracket == -1) {
+                break;
+            }
+
             char paren = '(';
             char colo = ':';
             char next = markdown.charAt(closeBracket + 1);
@@ -28,7 +32,7 @@ public class MarkdownParse {
                 int closeParen = markdown.indexOf(")", openParen);
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
-                if(openBracket == -1 || openParen == -1 || closeBracket == -1 || closeParen == -1){
+                if(openParen == -1 || closeParen == -1){
                     break;
                 }
             }
@@ -42,6 +46,7 @@ public class MarkdownParse {
                 break;
             }
 
+            //System.out.println("Infinite loop");
         }
 
         return toReturn;
