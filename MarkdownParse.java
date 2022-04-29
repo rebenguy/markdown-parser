@@ -46,7 +46,6 @@ public class MarkdownParse {
                 break;
             }
 
-            //System.out.println("Infinite loop");
         }
 
         return toReturn;
