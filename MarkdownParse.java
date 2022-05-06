@@ -48,6 +48,7 @@ public class MarkdownParse {
 
         }
 
+        System.out.println("Complete");
         return toReturn;
     }
 
@@ -58,4 +59,5 @@ public class MarkdownParse {
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
     }
+
 }
