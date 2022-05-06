@@ -74,6 +74,6 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         String links = MarkdownParse.getLinks(content).toString();
 
-        assertEquals("[page.com]", links);
+        assertEquals("[]", links);
     }
 }
