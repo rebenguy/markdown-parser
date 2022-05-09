@@ -48,7 +48,6 @@ public class MarkdownParse {
 
         }
 
-        System.out.println("Complete");
         return toReturn;
     }
 
